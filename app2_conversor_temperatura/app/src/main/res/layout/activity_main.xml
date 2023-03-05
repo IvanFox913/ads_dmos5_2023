@@ -29,15 +29,65 @@
             android:id="@+id/button_convertertempfc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Celsius"
+            android:text="ºF para ºC"
             android:layout_marginHorizontal="10sp"
             ></Button>
+
+        <Button
+            android:id="@+id/button_convertertempfk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ºF paraºK"
+            android:layout_marginHorizontal="10sp"
+            ></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
 
         <Button
             android:id="@+id/button_convertertempcf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Faranheit"
+            android:text="ºC para ºF"
+            android:layout_marginHorizontal="10sp"
+            ></Button>
+
+        <Button
+            android:id="@+id/button_convertertempck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ºC para ºK"
+            android:layout_marginHorizontal="10sp"
+            ></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/button_convertertempkc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ºK para C"
+            android:layout_marginHorizontal="10sp"
+            ></Button>
+
+        <Button
+            android:id="@+id/button_convertertempkf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ºK para F"
             android:layout_marginHorizontal="10sp"
             ></Button>
 

@@ -11,7 +11,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements android.view.View.OnClickListener{
 
     private EditText valueEditText;
-    private Button converterTempButton;
+    private Button converterTempButtonFC;
+    private Button converterTempButtonCF;
     private TextView finalValueTextView;
 
     @Override
@@ -22,16 +23,25 @@ public class MainActivity extends AppCompatActivity implements android.view.View
         valueEditText = findViewById(R.id.edittext_inputtemp);
         finalValueTextView = findViewById(R.id.textview_finalvalue);
 
-        converterTempButton = findViewById(R.id.button_convertertemp);
-        converterTempButton.setOnClickListener(this);
+        converterTempButtonFC = findViewById(R.id.button_convertertempfc);
+        converterTempButtonFC.setOnClickListener(this);
+
+        converterTempButtonCF = findViewById(R.id.button_convertertempcf);
+        converterTempButtonCF.setOnClickListener(this);
     }
 
     @Override
     public void onClick(android.view.View view){
-        if(view == converterTempButton){
+        if(view == converterTempButtonFC){
             ConversorTemperatura conversorTemperatura = new FaranheitStrategy();
             double value = conversorTemperatura.getConversion(getValue());
             finalValueTextView.setText(String.format("%.2f ºC", value));
+        }
+
+        if(view == converterTempButtonCF){
+            ConversorTemperatura conversorTemperatura = new CelsiusStrategy();
+            double value = conversorTemperatura.getConversion(getValue());
+            finalValueTextView.setText(String.format("%.2f ºF", value));
         }
     }
 
